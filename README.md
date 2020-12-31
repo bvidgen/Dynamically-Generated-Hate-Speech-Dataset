@@ -2,6 +2,7 @@
 ReadMe for v0.1 of the Dynamically Generated Hate Speech Dataset from Vidgen et al. (2020). If you use the dataset, please cite our paper on Arxiv.
 Contact Dr. Bertie Vidgen if you have feedback or queries: bertievidgen@gmail.com.
 Please note that this is v0.1 of the dataset. Updates may be released in the future.
+The full author list is: Bertie Vidgen (The Alan Turing Institute), Tristan Thrush (Facebook), Zeerak Waseem (University of Sheffield) and Douwe Kiela (Facebook). This paper is an output of the Dynabench project: https://dynabench.org/tasks/5#overall
 
 
 ## Overview
@@ -96,8 +97,6 @@ We use shorthand labels for targets when constructing the dataset, which can be 
 	russian -> Russian people
 	pol -> Polish people
 	hispanic -> Hispanic people, including latinx
-
-
 
 	nazi -> Nazis ('Support' type of hate)
 	hitler -> Hitler ('Support' type of hate)
