@@ -97,7 +97,7 @@ We use shorthand labels for targets when constructing the dataset, which can be 
 	eastern european -> Eastern Europeans
 	russian -> Russian people
 	pol -> Polish people
-	hispanic -> Hispanic people, including latinx
+	hispanic -> Hispanic people, including latinx and Mexicans
 
 	nazi -> Nazis ('Support' type of hate)
 	hitler -> Hitler ('Support' type of hate)
