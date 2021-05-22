@@ -1,5 +1,5 @@
 # Dynamically-Generated-Hate-Speech-Dataset
-ReadMe for v0.2 of the Dynamically Generated Hate Speech Dataset from Vidgen et al. (2021). If you use the dataset, please cite our paper in the Proceedings of ACL 2021, and available on Arxiv.
+ReadMe for v0.2 of the Dynamically Generated Hate Speech Dataset from Vidgen et al. (2021). If you use the dataset, please cite our paper in the Proceedings of ACL 2021, and available on [Arxiv](https://arxiv.org/abs/2012.15761).
 Contact Dr. Bertie Vidgen if you have feedback or queries: bertievidgen@gmail.com.
 Please note that this is v0.2 of the dataset. Updates may be released in the future.
 
