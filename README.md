@@ -1,54 +1,38 @@
 # Dynamically-Generated-Hate-Speech-Dataset
-ReadMe for v0.1 of the Dynamically Generated Hate Speech Dataset from Vidgen et al. (2020). If you use the dataset, please cite our paper on Arxiv.
+ReadMe for v0.1 of the Dynamically Generated Hate Speech Dataset from Vidgen et al. (2021). If you use the dataset, please cite our paper in the Proceedings of ACL 2021, and available on Arxiv.
 Contact Dr. Bertie Vidgen if you have feedback or queries: bertievidgen@gmail.com.
-Please note that this is v0.1 of the dataset. Updates may be released in the future.
+Please note that this is v0.2 of the dataset. Updates may be released in the future.
 
 The full author list is: Bertie Vidgen (The Alan Turing Institute), Tristan Thrush (Facebook), Zeerak Waseem (University of Sheffield) and Douwe Kiela (Facebook). This paper is an output of the Dynabench project: https://dynabench.org/tasks/5#overall
 
 
 ## Overview
-The Dynamically Generated Hate Speech Dataset is provided in two tables.
+The Dynamically Generated Hate Speech Dataset is provided in one table.
 
-The first table is the dataset of entries, with the entry ID, label, type, annotator ID, status, round, split, round model predictions and whether the model was fooled (model_wrong).
+'acl.id' is the unique ID of the entry.
 
-The second table is the targets of the hate, in a wide format. Because annotators could identify targets inductively, a large number were identified with only or two associated entries, often if they were intersectional characteristics. We combine all identities mentioned in fewer than 15 entries into an 'Other category'. This affects less than 1% of all the hateful entries, whilst reducing the number of target identities to 41. The two tables can be merged on the 'ID' variable.
+'Text' is the content which has been entered. All content is synthetic.
 
+'Label' is a binary variable, indicating whether or not the content has been identified as hateful. It takes two values: hate, nothate.
 
-## Table 1: Dataset of entries
-'id' is the unique ID of the entry.
+'Type' is a categorical variable, providing a secondary label for hateful content. For hate it can take five values: Animosity, Derogation, Dehumanization, Threatening and Support for Hateful Entities. Please see the paper for more detail. For nothate the 'type' is 'none'. In round 1 the 'type' was not given and is marked as 'notgiven'.
 
-'text' is the content which has been entered. All content is synthetic, although it might in some cases be closely inspired by real world hate and non-hate.
+'Target' is a categorical variable, providing the group that is attacked by the hate. It can include intersectional characteristics and multiple groups can be identified. For nothate the type is 'none'. Note that in round 1 the 'target' was not given and is marked as 'notgiven'.
 
-'label' is a binary variable, indicating whether the content hs been identified as hate or not.
+'Level' reports whether the entry is original content or a perturbation.
 
-'type' is a categorical variable, providing a secondary label for hateful content. For hate t can take five values: Animosity, Derogation, Dehumanization, Threatening and Supoprt for Hateful Entities. Please see the paper for more detail. For non-hate 'type' is always NA. Note that in round 1 a type was not given. You can subset to only round 1 if you want to account for this (see 'round').
+'Round' is a categorical variable. It gives the round of data entry (1, 2, 3 or 4) with a letter for whether the entry is original content ('a') or a perturbation ('b'). Perturbations were not made for round 1.
 
-'model_wrong' is a logical variable. It reports whether the taarget model for that round was fooled. Note that models were retrained and redployed in between each round, which means that the model_wrong value can only be understood in relation to each round.
+'Round.base' is a categorical variable. It gives the round of data entry, indicated with just a number (1, 2, 3 or 4).
 
-'db.model_preds' gives the model prediction, from 0 (not hate) to 1 (hate). As with 'model_wrong' it can only be understood in relation to each round. Note that model predictions are not available for entries completed offline without a model-in-the-loop, i.e. the perturbation rounds.
+'Split' is a categorical variable. it gives the data split that the entry has been assigned to. This can take the values 'train', 'dev' and 'test'. The choice of splits is explained in the paper.
 
-'status' reports whether the entry is original content entered into Dynabench or a perturbation. See the paper for more information. 
+'Annotator' is a categorical variable. It gives the annotator who entered the content. Annotator IDs are random alphanumeric strings. There are 20 annotators in the dataset.
 
-'round' is a categorical variable. It gives the round of data entry, indicated with a number (1, 2 or 3) and then a letter for whether the entry is original content entered into Dynabench ('a') or a perturbation ('b'). Perturbations were not made for round 1. As such 'round' can take the values: 1, 2a, 2b, 3a and 3b.
-
-'split' is a categorical variable. it gives the data split that the entry has been assigned to. This can take the values 'train', 'dev' and 'test'. The choices of splits is given in the paper.
-
-'annotator' is a categorical variable. It gives the annotator who entered the content. Annotator IDs are random alphanumeric strings. There are 20 annotators in the dataset.
+'acl.id.matched' is the ID of the matched entry, connecting the original (given in 'acl.id') and the perturbed version.
 
 
-## Table 2: Dataset of targets
-'id' is the unique ID of the entry. It can be used to merge the dataset with the other table.
-
-All entries assigned to 'non hate' have 'none' as a target.
-Hateful entries assigned to 'hate' are associated with 41 distinct target identities.
-
-Any identities with 8 or fewer entries were combined into an 'Other' category. This reduced the number of target identities, whilst only affecting 1% of the data (see the paper for more details).
-
-One other variable is important to note: 'NoTargetRecorded'. This is for entries which were entered without a target identity at the point of creation (i.e. all entries in Round 1 and a small number, erroneously, from the subsequent rounds.)
-
-Note that for the 'Supporting hateful entities' type of hate the target identified is the entity which is being supported. Specifically, the dataset includes 'Nazi' and 'Hitler', with the other entities being listed in 'Other'.
-
-We use shorthand labels for targets when constructing the dataset, which can be converted (and grouped) as follows:
+For identities (recorded under 'Target') we use shorthand labels to constructed the dataset, which can be converted (and grouped) as follows:
 
 	none -> for non hateful entries 
 	NoTargetRecorded -> for hateful entries with no target recorded
