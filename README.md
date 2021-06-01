@@ -3,7 +3,7 @@ ReadMe for v0.2 of the Dynamically Generated Hate Speech Dataset from Vidgen et 
 Contact Dr. Bertie Vidgen if you have feedback or queries: bertievidgen@gmail.com.
 Please note that this is v0.2 of the dataset. Updates may be released in the future.
 
-The full author list is: Bertie Vidgen (The Alan Turing Institute), Tristan Thrush (Facebook), Zeerak Waseem (University of Sheffield) and Douwe Kiela (Facebook). This paper is an output of the Dynabench project: https://dynabench.org/tasks/5#overall
+The full author list is: Bertie Vidgen (The Alan Turing Institute), Tristan Thrush (Facebook AI Research), Zeerak Waseem (University of Sheffield) and Douwe Kiela (Facebook AI Research). This paper is an output of the Dynabench project: https://dynabench.org/tasks/5#overall
 
 
 ## Overview
