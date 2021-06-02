@@ -86,7 +86,8 @@ For identities (recorded under 'Target') we use shorthand labels to constructed 
 	nazi -> Nazis ('Support' type of hate)
 	hitler -> Hitler ('Support' type of hate)
 	
-
+## Code
+Code was implemented using hugging face transformers library.
 
 
 
