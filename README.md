@@ -7,7 +7,7 @@ The full author list is: Bertie Vidgen (The Alan Turing Institute), Tristan Thru
 ## Dataset descriptions
 v0.2.2.csv is the full dataset used in our ACL paper. 
 
-v0.2.3.csv removes duplicate entries, all of which occurred in round 1. Duplicates come from two sources: (1) annotators entering the same content multiple times and (2) different annotators entering the same content. The duplicates are interesting for understanding the annotation process, and the challenges of dynamically generating datasets. However, they are likely to be less useful for training classifiers and so are removed in v0.2.3. We did not lower case the text as capitalisations contain potentially useful signals.
+v0.2.3.csv removes duplicate entries, all of which occurred in round 1. Duplicates come from two sources: (1) annotators entering the same content multiple times and (2) different annotators entering the same content. The duplicates are interesting for understanding the annotation process, and the challenges of dynamically generating datasets. However, they are likely to be less useful for training classifiers and so are removed in v0.2.3. We did not lower case the text before removing duplicates as capitalisations contain potentially useful signals.
 
 
 
