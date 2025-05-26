@@ -4,6 +4,8 @@ Contact Dr. Bertie Vidgen if you have feedback or queries: bertievidgen@gmail.co
 
 The full author list is: Bertie Vidgen (The Alan Turing Institute), Tristan Thrush (Facebook AI Research), Zeerak Waseem (University of Sheffield) and Douwe Kiela (Facebook AI Research). This paper is an output of the Dynabench project: https://dynabench.org/tasks/5#overall
 
+The dataset is licenced with CC-BY 4.0. 
+
 ## Dataset descriptions
 v0.2.2.csv is the full dataset used in our ACL paper. 
 
